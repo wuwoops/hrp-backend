@@ -17,7 +17,7 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         System.out.println("username:" + username);
         User user = userService.lambdaQuery()
-                .eq(User::getUserName, username)
+                .eq(User::getUsername, username)
                 .oneOpt()
                 .orElseThrow(() -> new UsernameNotFoundException(username));
         return new CustomUserDetails(user);

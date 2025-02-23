@@ -7,9 +7,9 @@ import lombok.Data;
 @TableName("\"user\"")
 public class User {
     private String id;
-    private String userName;
+    private String username;
     private String password;
-    private String nickName;
+    private String nickname;
     private Integer age;
     private String email;
     private String job;

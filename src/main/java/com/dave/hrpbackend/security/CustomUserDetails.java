@@ -24,9 +24,9 @@ public class CustomUserDetails implements UserDetails {
 
     public CustomUserDetails(User user) {
         this.id = user.getId();
-        this.username = user.getUserName();
+        this.username = user.getUsername();
         this.password = user.getPassword();
-        this.nickname = user.getNickName();
+        this.nickname = user.getNickname();
         this.Authorities = Arrays.stream(user.getAuthorities().split(",")).map(Authority::valueOf).toList();
     }
 
